@@ -1,0 +1,201 @@
+// #include<stdio.h>
+// int main(int argc, char const *argv[])
+// {
+//     float cp,sp,profit,loss;
+//     printf("Enter the cost price:");
+//     scanf("%f",&cp);
+//     printf("Enter the selling price:");
+//     scanf("%f",&sp);
+//     if(sp>cp)
+//     {
+//         profit=sp-cp;
+//         printf("The seller has made profit of %.2f",profit);
+//     }
+//     else if(cp==sp)
+//     {
+//         printf("The seller neither made a profit nor made a loss");
+//     }
+//     else
+//     {
+//         loss=cp-sp;
+//         printf("The seller has made loss of %.2f",loss);
+//     }
+//     return 0;
+// }
+
+// #include<stdio.h>
+// int main(int argc, char const *argv[])
+// {
+//     int l,b,Area,Perimeter;
+//     printf("Enter the lenght and breadth of rectangle respectively:");
+//     scanf("%d %d",&l,&b);
+//     Area=l*b;
+//     printf("The Area of rectangle is %d\n",Area);
+//     Perimeter=2*(l+b);
+//     printf("The perimeter of rectangle is %d\n",Perimeter);
+//     if(Area>Perimeter){
+//         printf("Area of rectangle is greater than perimeter of rectangle\n");
+//     }
+//     else if(Area==Perimeter){
+//         printf("Area of rectanggle is equal to perimeter of rectangle\n");
+//     }
+//     else{
+//         printf("Area of rectangle is smaller than perimeter of rectangle\n");
+//     }
+//     return 0;
+// }
+
+// #include<stdio.h>
+// int main(int argc, char const *argv[])
+// {
+//     int n;
+//     printf("Enter the number:");
+//     scanf("%d",&n);
+//     if((n>99)&&(n<1000)){
+//         printf("The number entered %d is a three digit number",n);
+//     }
+//     else{
+//         printf("The number entered %d is not a three digit number",n);
+//     }
+//     return 0;
+// }
+
+// #include<stdio.h>
+// int main(int argc, char const *argv[])
+// {
+//     int n;
+//     printf("Enter the number:");
+//     scanf("%d",&n);
+//     if((n%5==0)&&(n%3==0)){
+//         printf("The number entered %d is divisible by 5 and 3",n);
+//     }
+//     else{
+//         printf("The number entered %d is not divisible by 5 and 3",n);
+//     }
+//     return 0;
+// }
+
+// #include<stdio.h>
+// int main(int argc, char const *argv[])
+// {
+//     int a,b,c,greatest;
+//     printf("Enter the numbers:");
+//     scanf("%d %d %d",&a,&b,&c);
+//     if((a>b)&&(a>c)){
+//         printf("a is the greatest number");
+//     }
+//     else if(b>c){
+//         printf("b is the greatest number");
+//     }
+//     else{
+//         printf("c is the greatest number");
+//     }
+//     return 0;
+// }
+
+// #include<stdio.h>
+// int main(int argc, char const *argv[])
+// {
+//     int a,b,c;
+//     printf("Enter the numbers:");
+//     scanf("%d %d %d",&a,&b,&c);
+//     if((a+b>c)&&(b+c>a)&&(a+c>b)){
+//         printf("Valid triangle");
+//     }
+//     else{
+//         printf("Invalid triangle");
+//     }
+//     return 0;
+// }
+
+// #include<stdio.h>
+// int main(int argc, char const *argv[])
+// {
+//     int a,b,c;
+//     printf("Enter the age of Ram,Shyam and Ajay:");
+//     scanf("%d %d %d",&a,&b,&c);
+//     if((a<b)&&(a<c)){
+//         printf("Ram is youngest");
+//     }
+//     else if(b<c){
+//         printf("Shyam is youngest");
+//     }
+//     else{
+//         printf("Ajay is youngest");
+//     }
+//     return 0;
+// }
+
+// #include <stdio.h>
+// int main(int argc, char const *argv[])
+// {
+//     int n;
+//     printf("Enter the numbers:");
+//     scanf("%d", &n);
+//     if((n%5==0)||(n%3==0))
+//     {
+//         if (n % 15 != 0)
+//         {
+//             printf("The number is divisible by 5 or 3 but not divisible by 15");
+//         }
+//         else
+//         {
+//             printf("The number is divisible by 15");
+//         }
+//     }
+//     else{
+//         printf("The number is not divisible by 5 or 3");
+//     }
+//     return 0;
+// }
+
+// #include<stdio.h>
+// int main(int argc, char const *argv[])
+// {
+//     double x1,x2,x3,y1,y2,y3,m1,m2,m3;
+//     printf("The values of x1,y1,x2,y2,x3,y3 respectively are:");
+//     scanf("%lf %lf %lf %lf %lf %lf",&x1,&y1,&x2,&y2,&x3,&y3);
+//     m1=(y2-y1)/(x2-x1);
+//     printf("%.2lf\n",m1);
+//     m2=(y3-y2)/(x3-x2);
+//     printf("%.2lf\n",m2);
+//     if(m1==m2){
+//         printf("All three points lies on the same line\n");
+//     }
+//     else{
+//         printf("They does not lie on the same line");
+//     }
+//     return 0;
+// }
+
+// #include<stdio.h>
+// int main(int argc, char const *argv[])
+// {
+//     int x,y;
+//     printf("Enter the values of x and y:");
+//     scanf("%d %d",&x,&y);
+//     if((y==0)&&(x!=0)){
+//         printf("Lies on x-axis");
+//     }
+//     else if((x==0)&&(y!=0)){
+//         printf("Lies on y-axis");
+//     } 
+//     else if((x==0)&&(y==0)){
+//         printf("Lies on the origin");
+//     }
+//     else{
+//         printf("Lies between x-axis and y-axis");
+//     }
+//     return 0;
+// }
+
+// #include<stdio.h>
+// int main(int argc, char const *argv[])
+// {
+//     int a,b,c;
+//     printf("Enter the number:");
+//     scanf("%d %d %d",&a,&b,&c);
+//     int big=(a>b)?(a>c?a:c):(b>c?b:c);
+//     printf("%d",big);
+//     return 0;
+// }
