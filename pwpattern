@@ -1,0 +1,1029 @@
+// #include <stdio.h>
+// int main(int argc, char const *argv[])
+// {
+//    int n,m;
+//    printf("Enter the rows:");
+//    scanf("%d",&n);
+//    printf("Enter the columns:");
+//    scanf("%d",&m);
+//     for (int i = 1; i <= n; i++)
+//     {
+//         for (int j = 1; j <= m; j++)
+//         {
+//             printf("*");
+//         }
+//         printf("\n");
+//     }
+
+//     return 0;
+// }
+
+/*  ****
+ ****
+ ****
+ ****  */
+
+// #include <stdio.h>
+// int main(int argc, char const *argv[])
+// {
+//    int n,m;
+//    printf("Enter the rows:");
+//    scanf("%d",&n);
+//    printf("Enter the columns:");
+//    scanf("%d",&m);
+//     for (int i = 1; i <= n; i++)
+//     {
+//         for (int j = 1; j <= m; j++)
+//         {
+//             printf("%d",j);
+//         }
+//         printf("\n");
+//     }
+//     return 0;
+// }
+
+/*  1234
+    1234
+    1234
+    1234  */
+
+// #include <stdio.h>
+// int main(int argc, char const *argv[])
+// {
+//    int n;
+//    printf("Enter the rows:");
+//    scanf("%d",&n);
+//     for (int i = 1; i <= n; i++)
+//     {
+//         for (int j = 1; j <= i; j++)
+//         {
+//             printf("*");
+//         }
+//         printf("\n");
+//     }
+
+//     return 0;
+// }
+
+/*  *
+ **
+ ***
+ ****  */
+
+// Method 1
+// #include <stdio.h>
+// int main(int argc, char const *argv[])
+// {
+//    int n;
+//    printf("Enter the rows:");
+//    scanf("%d",&n);
+//     for (int i = 1; i <= n; i++)
+//     {
+//         for (int j = 1; j <= n+1-i; j++)
+//         {
+//             printf("*");
+//         }
+//         printf("\n");
+//     }
+
+//     return 0;
+// }
+
+// Method 2
+// #include <stdio.h>
+// int main(int argc, char const *argv[])
+// {
+//    int n;
+//    printf("Enter the rows:");
+//    scanf("%d",&n);
+//    int a=n;
+//     for (int i = 1; i <= n; i++)
+//     {
+//         for (int j = 1; j <= a; j++)
+//         {
+//             printf("*");
+//         }
+//         a--;
+//         printf("\n");
+//     }
+
+//     return 0;
+// }
+
+// Method 3
+// #include <stdio.h>
+// int main(int argc, char const *argv[])
+// {
+//    int n;
+//    printf("Enter the rows:");
+//    scanf("%d",&n);
+//     for (int i = 1; i <= n; i++)
+//     {
+//         for (int j = n; j >= i; j--)
+//         {
+//             printf("*");
+//         }
+//         printf("\n");
+//     }
+
+//     return 0;
+// }
+
+/*  ****
+ ***
+ **
+ *  */
+
+// #include <stdio.h>
+// int main(int argc, char const *argv[])
+// {
+//    int n;
+//    printf("Enter the rows:");
+//    scanf("%d",&n);
+//     for (int i = 1; i <= n; i++)
+//     {
+//         for (int j = 1; j <= i; j++)
+//         {
+//             printf("%d",j);
+//         }
+//         printf("\n");
+//     }
+
+//     return 0;
+// }
+
+/*  1
+    12
+    123
+    1234  */
+
+// #include <stdio.h>
+// int main(int argc, char const *argv[])
+// {
+//    int n,m;
+//    printf("Enter the rows:");
+//    scanf("%d",&n);
+//     for (int i = 1; i <= n; i++)
+//     {
+//         for (int j = 1; j <= n+1-i; j++)
+//         {
+//             printf("%d",j);
+//         }
+//         printf("\n");
+//     }
+//     return 0;
+// }
+
+/*  1234
+    123
+    12
+    1  */
+
+// #include <stdio.h>
+// int main(int argc, char const *argv[])
+// {
+//    int n;
+//    printf("Enter the rows:");
+//    scanf("%d",&n);
+//     for (int i = 1; i <= n; i++)
+//     {
+//         int a=1;
+//         for (int j = 1; j <=i; j++)
+//         {
+//             printf("%d ",a);
+//             a=a+2;
+//         }
+//         printf("\n");
+//     }
+//     return 0;
+// }
+
+/*  1
+    1 3
+    1 5 7
+    1 5 7 9  */
+
+// Method 1
+// #include <stdio.h>
+// int main(int argc, char const *argv[])
+// {
+//     char n;
+//     printf("Enter the alphabet:");
+//     scanf("%c", &n);
+//     for (char i = 'A'; i <= n; i++)
+//     {
+//         for (char j = 'A'; j <= n; j++)
+//         {
+//             printf("%c", j);
+//         }
+//         printf("\n");
+//     }
+//     return 0;
+// }
+
+// Method 2
+// #include <stdio.h>
+// int main(int argc, char const *argv[])
+// {
+//    int n;
+//    printf("Enter the rows:");
+//    scanf("%d",&n);
+//     for (int i = 1; i <= n; i++)
+//     {
+//         int a=1;
+//         for (int j = 1; j <=n; j++)
+//         {
+//             int d=a+64;
+//             char ch=(char)d;
+//             printf("%c ",ch);
+//             a=a+1;
+//         }
+//         printf("\n");
+//     }
+//     return 0;
+// }
+
+/*  A B C D
+    A B C D
+    A B C D
+    A B C D  */
+
+// #include <stdio.h>
+// int main(int argc, char const *argv[])
+// {
+//    int n;
+//    printf("Enter the rows:");
+//    scanf("%d",&n);
+//     for (int i = 1; i <= n; i++)
+//     {
+//         int a=1;
+//         for (int j = 1; j <=i; j++)
+//         {
+//             int d=a+64;
+//             char ch=(char)d;
+//             printf("%c ",ch);
+//             a=a+1;
+//         }
+//         printf("\n");
+//     }
+//     return 0;
+// }
+
+/*  A
+    A B
+    A B C
+    A B C D  */
+
+// #include <stdio.h>
+// int main(int argc, char const *argv[])
+// {
+//    int n;
+//    printf("Enter the rows:");
+//    scanf("%d",&n);
+//     for (int i = 1; i <= n; i++)
+//     {
+//         int a=1;
+//         for (int j = 1; j <=i; j++)
+//         {
+//             if(i%2==0){
+//             int d=a+64;
+//             char ch=(char)d;
+//             printf("%c ",ch);
+//             a=a+1;
+//             }
+//             else{
+//                 printf("%d ",j);
+//             }
+//         }
+//         printf("\n");
+//     }
+//     return 0;
+// }
+
+/*  1
+    A B
+    1 2 3
+    A B C D  */
+
+// Method 1
+//  #include<stdio.h>
+//  int main(int argc, char const *argv[])
+//  {
+//      int n;
+//      printf("Enter the value of n:");
+//      scanf("%d",&n);
+//      for(int i=1;i<=n;i++){
+//          for(int j=1;j<=n;j++){
+//              if(i==3 || j==3){
+//                  printf("*");
+//              }
+//              else{
+//                  printf(" ");
+//              }
+//          }
+//          printf("\n");
+//      }
+//      return 0;
+//  }
+
+// Method 2
+//  #include<stdio.h>
+//  int main(int argc, char const *argv[])
+//  {
+//      int n;
+//      printf("Enter the value of n:");
+//      scanf("%d",&n);
+//      for(int i=1;i<=n;i++){
+//          for(int j=1;j<=n;j++){
+//              if(i==n/2+1 || j==n/2+1){
+//                  printf("*");
+//              }
+//              else{
+//                  printf(" ");
+//              }
+//          }
+//          printf("\n");
+//      }
+//      return 0;
+//  }
+
+/*     *
+ *
+ *****
+ *
+ *   */
+
+// #include<stdio.h>
+// int main(int argc, char const *argv[])
+// {
+//     int n;
+//     printf("Enter the value of n:");
+//     scanf("%d",&n);
+//     for(int i=1;i<=n;i++){
+//         for(int j=1;j<=n;j++){
+//             if(i==1||j==1||i==n||j==n){
+//                 printf("*");
+//             }
+//             else{
+//                 printf(" ");
+//             }
+//         }
+//         printf("\n");
+//     }
+//     return 0;
+// }
+
+/*  *****
+ *   *
+ *   *
+ *   *
+ *****  */
+
+// #include<stdio.h>
+// int main(int argc, char const *argv[])
+// {
+//     int n;
+//     printf("Enter the value of n:");
+//     scanf("%d",&n);
+//     for(int i=1;i<=n;i++){
+//         for(int j=1;j<=n;j++){
+//             if(i==j || i+j==n+1){
+//                 printf("*");
+//             }
+//             else{
+//                 printf(" ");
+//             }
+//         }
+//         printf("\n");
+//     }
+//     return 0;
+// }
+
+/*  *       *
+ *   *
+ *
+ *   *
+ *       *   */
+
+// #include<stdio.h>
+// int main(int argc, char const *argv[])
+// {
+//     int n;
+//     printf("Enter the value of n:");
+//     scanf("%d",&n);
+//     int a=1;
+//     for(int i=1;i<=n;i++){
+//         for(int j=1;j<=i;j++){
+//             printf("%d",a);
+//             a++;
+//         }
+//         printf("\n");
+//     }
+//     return 0;
+// }
+
+/*  1
+    2 3
+    4 5 6
+    7 8 9 10 */
+
+// #include<stdio.h>
+// int main(int argc, char const *argv[])
+// {
+//     int n;
+//     printf("Enter the value of n:");
+//     scanf("%d",&n);
+//     int a=1;
+//     for(int i=1;i<=n;i++){
+//         for(int j=1;j<=i;j++){
+//             printf("%d ",a);
+//             a=a+2;
+//         }
+//         printf("\n");
+//     }
+//     return 0;
+// }
+
+/* 1
+   3 5
+   7 9 11
+   13 15 17 19 */
+
+// Method 1
+//   #include <stdio.h>
+//   int main(int argc, char const *argv[])
+//   {
+//       int n;
+//       printf("Enter the value of n:");
+//       scanf("%d", &n);
+//       int a;
+//       for (int i = 1; i <= n; i++)
+//       {
+//           if (i % 2 != 0)
+//           {
+//               a = 1;
+//           }
+//           else
+//           {
+//               a = 0;
+//           }
+//           for (int j = 1; j <= i; j++)
+//           {
+//               printf("%d ", a);
+//               if (a == 0)
+//               {
+//                   a = 1;
+//               }
+//               else
+//               {
+//                   a = 0;
+//               }
+//           }
+//           printf("\n");
+//       }
+//       return 0;
+//   }
+
+/* 1
+   0 1
+   1 0 1
+   0 1 0 1
+   1 0 1 0 1 */
+
+// Method 2
+//  #include<stdio.h>
+//  int main(int argc, char const *argv[])
+//  {
+//      int n;
+//      printf("Enter the value of n:");
+//      scanf("%d",&n);
+//      for (int i = 1; i <= n; i++)
+//      {
+//          for (int j = 1; j <= i; j++)
+//          {
+//              if((i+j)%2==0){
+//                  printf("1 ");
+//              }
+//              else{
+//                  printf("0 ");
+//              }
+//          }
+//          printf("\n");
+//      }
+//      return 0;
+//  }
+
+/* 1
+   0 1
+   1 0 1
+   0 1 0 1  */
+
+// #include <stdio.h>
+// int main(int argc, char const *argv[])
+// {
+//     int n;
+//     printf("Enter the value of n:");
+//     scanf("%d", &n);
+//     for (int i = 1; i <= n; i++)
+//     {
+//         for (int j = 1; j <= n - i; j++)
+//         {
+//             printf(" ");
+//         }
+//         for (int k = 1; k <= i; k++)
+//         {
+//             printf("*");
+//         }
+//         printf("\n");
+//     }
+//     return 0;
+// }
+
+/*     *
+ **
+ ***
+ ****  */
+
+// #include<stdio.h>
+// int main(int argc, char const *argv[])
+// {
+//     int n;
+//     printf("Enter the value of n:");
+//     scanf("%d",&n);
+//     for(int i=1;i<=n;i++){
+//         for (int j = 1; j <= n-i; j++)
+//         {
+//             printf(" ");
+//         }
+//         for (int k = 1; k <= n; k++)
+//         {
+//             printf("*");
+//         }
+//         printf("\n");
+//     }
+//     return 0;
+// }
+
+/*    ****
+     ****
+    ****
+   ****      */
+
+// #include <stdio.h>
+// int main(int argc, char const *argv[])
+// {
+//     int n;
+//     printf("Enter the value of n:");
+//     scanf("%d", &n);
+//     for (int i = 1; i <= n; i++)
+//     {
+//         int a = 1;
+//         for (int j = 1; j <= n - i; j++)
+//         {
+//             printf(" ");
+//         }
+//         for (int k = 1; k <= i; k++)
+//         {
+//             int d = a + 64;
+//             char ch = (char)d;
+//             printf("%c", ch);
+//             a++;
+//         }
+//         printf("\n");
+//     }
+//     return 0;
+// }
+
+/*     A
+      AB
+     ABC
+    ABCD   */
+
+// Method 1
+// #include<stdio.h>
+// int main(int argc, char const *argv[])
+// {
+//     int n;
+//     printf("Enter the value of n:");
+//     scanf("%d",&n);
+//     for (int i = 1; i <= n; i++)
+//     {
+//         for (int j = 1; j <= n-i ; j++)
+//         {
+//             printf(" ");
+//         }
+//         for (int k = 1; k <= 2*i-1 ; k++)
+//         {
+//             printf("*");
+//         }
+//         printf("\n");
+//     }
+//     return 0;
+// }
+
+// Method 2
+// #include<stdio.h>
+// int main(int argc, char const *argv[])
+// {
+//     int n;
+//     printf("Enter the value of n:");
+//     scanf("%d",&n);
+//     int a=1;
+//     int b=n-1;
+//     for (int i = 1; i <= n; i++)
+//     {
+//         for (int j = 1; j <= b ; j++)
+//         {
+//             printf(" ");
+//         }
+//         b=b-1;
+//         for (int k = 1; k <= a ; k++)
+//         {
+//             printf("*");
+//         }
+//         a=a+2;
+//         printf("\n");
+//     }
+//     return 0;
+// }
+
+/*      *
+       ***
+      *****
+     *******
+    *********   */
+
+// #include <stdio.h>
+// int main(int argc, char const *argv[])
+// {
+//     int n;
+//     printf("Enter the value of n:");
+//     scanf("%d", &n);
+//     for (int i = 0; i < n; i++)
+//     {
+//         for (int j = 0; j < n - i; j++)
+//         {
+//             printf(" ");
+//         }
+//         for (int k = 1; k <= 2 * i - 1; k++)
+//         {
+//             printf("%d", k);
+//         }
+//         printf("\n");
+//     }
+
+//     return 0;
+// }
+
+// #include <stdio.h>
+// int main(int argc, char const *argv[])
+// {
+//     int n;
+//     printf("Enter the value of n:");
+//     scanf("%d", &n);
+//     for (int i = 1; i <= n; i++)
+//     {
+//         for (int j = 1; j <= n - i; j++)
+//         {
+//             printf(" ");
+//         }
+//         int a = 1;
+//         for (int k = 1; k <= 2 * i - 1; k++)
+//         {
+//             int d = a + 64;
+//             char ch = (char)d;
+//             printf("%c", ch);
+//             a++;
+//         }
+//         printf("\n");
+//     }
+//     return 0;
+// }
+
+/*     A
+      ABC
+     ABCDE
+    ABDCEFG
+   ABCDEFGHI  */
+
+// #include <stdio.h>
+// int main(int argc, char const *argv[])
+// {
+//     int n;
+//     printf("Enter the value of n:");
+//     scanf("%d", &n);
+//     for (int i = 1; i <= n; i++)
+//     {
+//         for (int j = 1; j <= n - i; j++)
+//         {
+//             printf(" ");
+//         }
+//         for (int k = 1; k <= i; k++)
+//         {
+//             printf("%d", k);
+//         }
+//         int a = i - 1;
+//         for (int l = 1; l <= i - 1; l++)
+//         {
+//             printf("%d", a);
+//             a--;
+//         }
+//         printf("\n");
+//     }
+//     return 0;
+// }
+
+/*      1
+       121
+      12321
+     1234321
+    123454321  */
+
+// #include <stdio.h>
+// int main(int argc, char const *argv[])
+// {
+//     int n;
+//     printf("Enter the value of n:");
+//     scanf("%d", &n);
+//     for (int i = 1; i <= n; i++)
+//     {
+//         for (int j = 1; j <= n - i; j++)
+//         {
+//             printf(" ");
+//         }
+//         for (int k = 1; k <= i; k++)
+//         {
+//             char ch = (char)(k+64);
+//             printf("%c", ch);
+//         }
+//         int a = i - 1;
+//         for (int l = 1; l <= i - 1; l++)
+//         {
+//             char ch = (char)(a+64);
+//             printf("%c", ch);
+//             a--;
+//         }
+//         printf("\n");
+//     }
+//     return 0;
+// }
+
+/*      A
+       ABA
+      ABCBA
+     ABCDCBA     */
+
+// #include<stdio.h>
+// int main(int argc, char const *argv[])
+// {
+//     int n;
+//     printf("Enter the value of n:");
+//     scanf("%d",&n);
+//     int space=n/2;
+//     int star=1;
+//     int midline=n/2+1;
+//     for (int i = 1; i <= n; i++)
+//     {
+//         for (int j = 1; j <= space; j++)
+//         {
+//             printf(" ");
+//         }
+//         for (int k = 1; k <= star; k++)
+//         {
+//             printf("*");
+//         }
+//         if(i<midline){
+//             space--;
+//             star=star+2;
+//         }
+//         else{
+//             space++;
+//             star=star-2;
+//         }
+//         printf("\n");
+//     }
+//     return 0;
+// }
+
+ /*     *
+       ***
+      *****
+       ***
+        *    */
+
+// #include<stdio.h>
+// int main(int argc, char const *argv[])
+// {
+//     int n;
+//     printf("Enter the value of n:");
+//     scanf("%d",&n);
+//     int star=n;
+//     int space=0;
+//     for (int i = 0; i < n; i++)
+//     {
+//         for (int j = 0; j < space; j++)
+//         {
+//             printf(" ");
+//         }
+//         for (int k = 0; k < star; k++)
+//         {
+//             printf("*");
+//         }
+//         star--;
+//         space++;
+//         printf("\n");
+//     }
+//     return 0;
+// }
+
+/*  
+    *****
+     ****
+      ***
+       **
+        *    */
+
+// #include <stdio.h>
+// int main(int argc, char const *argv[])
+// {
+//     int n;
+//     printf("Enter the value of n:");
+//     scanf("%d", &n);
+//     int space = 1;
+//     int star = n;
+//     for (int i = 0; i < 2 * n + 1; i++)
+//     {
+//         printf("*");
+//     }
+//     printf("\n");
+//     for (int j = 0; j < n; j++)
+//     {
+//         for (int k = 0; k < star; k++)
+//         {
+//             printf("*");
+//         }
+//         for (int l = 0; l < space; l++)
+//         {
+//             printf(" ");
+//         }
+//         for (int k = 0; k < star; k++)
+//         {
+//             printf("*");
+//         }
+//         star--;
+//         space = space + 2;
+//         printf("\n");
+//     }
+//     return 0;
+// }
+
+/*
+    ***********
+    ***** *****
+    ****   ****
+    ***     ***
+    **       **
+    *         *    */
+
+// #include <stdio.h>
+// int main(int argc, char const *argv[])
+// {
+//     int n;
+//     printf("Enter the value of n:");
+//     scanf("%d", &n);
+//     int space = 1;
+//     int number = n;
+//     for (int i = 1; i <= 2 * n + 1; i++)
+//     {
+//         printf("%d", i);
+//     }
+//     printf("\n");
+//     for (int j = 1; j <= n; j++)
+//     {
+//         int a = 1;
+//         for (int k = 1; k <= number; k++)
+//         {
+//             printf("%d", a);
+//             a++;
+//         }
+//         for (int l = 1; l <= space; l++)
+//         {
+//             printf(" ");
+//             a++;
+//         }
+//         for (int k = 1; k <= number; k++)
+//         {
+//             printf("%d", a);
+//             a++;
+//         }
+//         number--;
+//         space = space + 2;
+//         printf("\n");
+//     }
+//     return 0;
+// }
+
+/*   
+    1234567
+    123 567
+    12   67
+    1     7   */
+  
+// #include <stdio.h>
+// int main(int argc, char const *argv[])
+// {
+//     int n;
+//     printf("Enter the value of n:");
+//     scanf("%d", &n);
+//     int space = 1;
+//     int alphabet = n;
+//     int b=1;
+//     char chh;
+//     for (int i = 1; i <= 2 * n + 1; i++)
+//     {
+//         char ch=(char)i+64;
+//         printf("%c", ch);
+//         b++;
+//     }
+//     printf("\n");
+//     for (int j = 1; j <= n; j++)
+//     {
+//         char c=65;
+//         for (int k = 1; k <= alphabet; k++)
+//         {
+//             char chh=(char)k+64;
+//             printf("%c", chh);
+//             c++;
+//         }
+//         for (int l = 1; l <= space; l++)
+//         {
+//             printf(" ");
+//             c++;
+//         }
+//         for (int k = 1; k <= alphabet; k++)
+//         {
+//             char chh=(char)k+64;
+//             printf("%c", chh);
+//             c++;
+//         }
+//         alphabet--;
+//         space = space + 2;
+//         printf("\n");
+//     }
+//     return 0;
+// }
+
+/*  
+    ABCDEFGHIJK
+    ABCDE ABCDE
+    ABCD   ABCD
+    ABC     ABC
+    AB       AB
+    A         A      
+                   */
+
+// #include <stdio.h>
+// int main(int argc, char const *argv[])
+// {
+//     int n;
+//     printf("Enter the value of n:");
+//     scanf("%d", &n);
+//     int min = 0;
+//     for (int i = 1; i <= 2 * n - 1; i++)
+//     {
+//         for (int j = 1; j <= 2 * n - 1; j++)
+//         {
+//             int a = i;
+//             if (a > n)
+//             {
+//                 a = 2 * n - i;
+//             }
+//             int b = j;
+//             if (b > n)
+//             {
+//                 b = 2 * n - j;
+//             }
+//             if (a < b)
+//             {
+//                 min = a;
+//             }
+//             else
+//             {
+//                 min = b;
+//             }
+//             printf("%d", n + 1 - min);
+//         }
+//         printf("\n");
+//     }
+//     return 0;
+// }
+
+/* 
+   4444444
+   4333334
+   4322234
+   4321234
+   4322234
+   4333334
+   4444444
+            */
