@@ -14,14 +14,14 @@
 //         }
 //         printf("\n");
 //     }
-
 //     return 0;
 // }
 
-/*  ****
- ****
- ****
- ****  */
+/*  
+   ****
+   ****
+   ****
+   ****   */
 
 // #include <stdio.h>
 // int main(int argc, char const *argv[])
@@ -61,14 +61,14 @@
 //         }
 //         printf("\n");
 //     }
-
 //     return 0;
 // }
 
-/*  *
- **
- ***
- ****  */
+/*  
+    *
+    **
+    ***
+    ****   */
 
 // Method 1
 // #include <stdio.h>
@@ -85,7 +85,6 @@
 //         }
 //         printf("\n");
 //     }
-
 //     return 0;
 // }
 
@@ -106,7 +105,6 @@
 //         a--;
 //         printf("\n");
 //     }
-
 //     return 0;
 // }
 
@@ -129,10 +127,11 @@
 //     return 0;
 // }
 
-/*  ****
- ***
- **
- *  */
+/*  
+   ****
+   ***
+   **
+   *     */
 
 // #include <stdio.h>
 // int main(int argc, char const *argv[])
@@ -148,7 +147,6 @@
 //         }
 //         printf("\n");
 //     }
-
 //     return 0;
 // }
 
@@ -348,10 +346,10 @@
 //  }
 
 /*     *
- *
- *****
- *
- *   */
+       *
+     *****
+       *
+       *     */
 
 // #include<stdio.h>
 // int main(int argc, char const *argv[])
@@ -373,11 +371,11 @@
 //     return 0;
 // }
 
-/*  *****
- *   *
- *   *
- *   *
- *****  */
+/*    *****
+      *   *
+      *   *
+      *   *
+      *****    */
 
 // #include<stdio.h>
 // int main(int argc, char const *argv[])
@@ -399,11 +397,13 @@
 //     return 0;
 // }
 
-/*  *       *
- *   *
- *
- *   *
- *       *   */
+/*  
+      *       *
+        *   *
+          *
+        *   *
+      *       *     
+                    */
 
 // #include<stdio.h>
 // int main(int argc, char const *argv[])
@@ -539,10 +539,11 @@
 //     return 0;
 // }
 
-/*     *
- **
- ***
- ****  */
+/*     
+     *
+     **
+     ***
+     ****    */
 
 // #include<stdio.h>
 // int main(int argc, char const *argv[])
@@ -671,9 +672,14 @@
 //         }
 //         printf("\n");
 //     }
-
 //     return 0;
 // }
+
+/*
+    1
+   123
+  12345
+ 1234567  */
 
 // #include <stdio.h>
 // int main(int argc, char const *argv[])
