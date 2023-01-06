@@ -1,0 +1,266 @@
+// #include <stdio.h>
+// int main()
+// {
+//     int n;
+//     printf("Enter the value of n:");
+//     scanf("%d", &n);
+//     for (int i = 1; i<= n; i++)
+//     {
+//         for (int j = i; j >= 1; j--)
+//         {
+//             printf("%d", j);
+//         }
+//         printf("\n");
+//     }
+//     return 0;
+// }
+
+/*
+   1
+   21
+   321
+   4321
+   54321
+        */
+
+// #include <stdio.h>
+// int main()
+// {
+//     int n;
+//     printf("Enter the value of n:");
+//     scanf("%d", &n);
+//     for (int i = 1; i<= n; i++)
+//     {
+//         for (int j = i; j >= 1; j--)
+//         {
+//             printf("%c", j+64);
+//         }
+//         printf("\n");
+//     }
+//     return 0;
+// }
+
+/*
+A
+BA
+CBA
+DCBA
+EDCBA
+*/
+
+// #include <stdio.h>
+// int main()
+// {
+//     int n;
+//     printf("Enter the value of n:");
+//     scanf("%d", &n);
+//     for (int i = n; i>= 1; i--)
+//     {
+//         for (int j = n; j >= i; j--)
+//         {
+//             printf("%d", j);
+//         }
+//         printf("\n");
+//     }
+//     return 0;
+// }
+
+/*
+5
+54
+543
+5432
+54321
+*/
+
+// #include <stdio.h>
+// int main()
+// {
+//     int n;
+//     printf("Enter the value of n:");
+//     scanf("%d", &n);
+//     for (int i = n; i>= 1; i--)
+//     {
+//         for (int j = 1; j <= i; j++)
+//         {
+//             printf("%d", j);
+//         }
+//         printf("\n");
+//     }
+//     return 0;
+// }
+
+/*
+12345
+1234
+123
+12
+1
+*/
+
+// #include<stdio.h>
+// int main()
+// {
+//     int n;
+//     printf("Enter the value of n:");
+//     scanf("%d",&n);
+//     for(int i=n;i>=1;i--){
+//         for(int j=1;j<=i;j++){
+//             printf("%c",j+64);
+//         }
+//         printf("\n");
+//     }
+//     return 0;
+// }
+
+/*
+ABCDE
+ABCD
+ABC
+AB
+A
+*/
+
+// #include <stdio.h>
+// int main()
+// {
+//     int n;
+//     printf("Enter the value of n:");
+//     scanf("%d", &n);
+//     for (int i = 1; i<= n; i++)
+//     {
+//         for (int j = i; j <= n; j++)
+//         {
+//             printf("%d", j);
+//         }
+//         printf("\n");
+//     }
+//     return 0;
+// }
+
+/*
+12345
+2345
+345
+45
+5
+*/
+
+// #include<stdio.h>
+// int main()
+// {
+//     int n;
+//     printf("Enter the value of n:");
+//     scanf("%d",&n);
+//     for(int i=1;i<=n;i++){
+//         for(int j=i;j<=n;j++){
+//             printf("%c",j+64);
+//         }
+//         printf("\n");
+//     }
+//     return 0;
+// }
+
+/*
+ABCDE
+BCDE
+CDE
+DE
+E
+*/
+
+// #include <stdio.h>
+// int main()
+// {
+//     int n;
+//     printf("Enter the value of n:");
+//     scanf("%d", &n);
+//     for (int i = 1; i <= 5; i++)
+//     {
+//         for (int j = n; j >= i; j--)
+//         {
+//             printf("%d", j);
+//         }
+//         printf("\n");
+//     }
+//     return 0;
+// }
+
+/*
+54321
+5432
+543
+54
+5
+*/
+
+// #include<stdio.h>
+// int main()
+// {
+//     int n;
+//     printf("Enter the value of n:");
+//     scanf("%d",&n);
+//     for(int i=1;i<=n;i++){
+//         for(int j=n;j>=i;j--){
+//             printf("%c",j+64);
+//         }
+//         printf("\n");
+//     }
+//     return 0;
+// }
+
+/*
+EDCBA
+EDCB
+EDC
+ED
+E
+*/
+
+// #include <stdio.h>
+// int main()
+// {
+//     int n;
+//     printf("Enter the value of n:");
+//     scanf("%d", &n);
+//     for (int i = n; i >= 1; i--)
+//     {
+//         for (int j = i; j >= 1; j--)
+//         {
+//             printf("%d", j);
+//         }
+//         printf("\n");
+//     }
+//     return 0;
+// }
+
+/*
+54321
+4321
+321
+21
+1
+*/
+
+// #include<stdio.h>
+// int main()
+// {
+//     int n;
+//     printf("Enter the value of n:");
+//     scanf("%d",&n);
+//     for(int i=n;i>=1;i--){
+//         for(int j=i;j>=1;j--){
+//             printf("%c",j+64);
+//         }
+//         printf("\n");
+//     }
+//     return 0;
+// }
+
+/*
+EDCBA
+DCBA 
+CBA  
+BA   
+A
+*/
