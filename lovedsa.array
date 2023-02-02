@@ -118,6 +118,8 @@ int main()
 }
 // } Driver Code Ends
 
+// Kth largest element
+
 //{ Driver Code Starts
 //Initial function template for C++
 
@@ -304,4 +306,131 @@ class Solution{
         }
         return st.size();
     }
+};
+
+// Cyclically Rotate an Array by one
+
+void reverse(int arr[],int start,int end){
+    for(int i=start,j=end;i<j;i++,j--){
+        int temp=arr[i];
+        arr[i]=arr[j];
+        arr[j]=temp;
+    }
+}
+
+void rotate(int arr[], int n)
+{
+    reverse(arr,0,n-1);
+    reverse(arr,0,0);
+    reverse(arr,1,n-1);
+}
+
+// Largest Sum Contiguous Subarray(Kadane's Algorithm)
+
+class Solution{
+    public:
+    // arr: input array
+    // n: size of array
+    //Function to find the sum of contiguous subarray with maximum sum.
+    long long maxSubarraySum(int arr[], int n){
+        
+        int sum=0;
+        int maximum=arr[0];
+        for(int i=0;i<n;i++){
+            sum+=arr[i];
+            maximum=max(maximum,sum);
+            if(sum<0){
+                sum=0;
+            }
+        }
+        return maximum;
+    }
+};
+
+// Minimize the Heights II
+
+class Solution {
+  public:
+    int getMinDiff(int arr[], int n, int k) {
+        sort(arr,arr+n);
+        int ans=arr[n-1]-arr[0];
+        int smallest=arr[0]+k;
+        int largest=arr[n-1]-k;
+        int minimum,maximum;
+        for(int i=0;i<n-1;i++){
+            minimum=min(smallest,arr[i+1]-k);
+            maximum=max(largest,arr[i]+k);
+            if(minimum<0){
+                continue;
+            }
+            ans=min(ans,maximum-minimum);
+        }
+        return ans;
+    }
+};
+
+// Minimum number of jumps
+
+class Solution{
+  public:
+    int minJumps(int arr[], int n){
+        int jump=0;
+        int position=0;
+        int destination=0;
+        for(int i=0;i<n-1;i++){
+            destination=max(destination,arr[i]+i);
+            if(position==i){
+                position=destination;
+                jump++;
+            }
+        }
+        if(position>=n-1){
+            return jump;
+        }
+        else{
+            return -1;
+        }
+    }
+};
+
+// Find Duplicate number
+
+class Solution{
+    public:
+        int findDuplicate(vector<int>& nums){
+            int slow=nums[0];
+            int fast=nums[0];
+            do{
+                slow=nums[slow];
+                fast=nums[nums[fast]];
+            }while(slow!=fast);
+            
+            fast=nums[0];
+            while(slow!=fast){
+                slow=nums[slow];
+                fast=nums[fast];
+            }
+            return slow;
+       }
+};
+
+// Merge two sorted arrays without using extra space
+
+class Solution{
+    public:
+        //Function to merge the arrays.
+        void merge(long long arr1[], long long arr2[], int n, int m) 
+        { 
+            int i = 0, j = 0, k = n - 1;
+            while (i <= k && j < m) {
+                if (arr1[i] < arr2[j])
+                    i++;
+                else {
+                    swap(arr2[j++], arr1[k--]);
+                }
+            }
+
+            sort(arr1, arr1 + n);
+            sort(arr2, arr2 + m);
+        } 
 };
