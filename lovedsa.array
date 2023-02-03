@@ -437,4 +437,371 @@ class Solution{
 
 // Merge Intervals
 
+class Solution {
+public:
+    vector<vector<int>> merge(vector<vector<int>>& interval) {
+        vector<vector<int>> result;
+        
+        //base case when there are no intervals
+        if(interval.size()==0){
+            return result;
+        } 
+        sort(interval.begin(),interval.end());
+        //insert the the the first interval in the result
+        result.push_back(interval[0]);
+        int j=0;
+        
+        for(int i=1;i<interval.size();i++)
+        {
+            //if intevals are overlapping
+            if(result[j][1]>=interval[i][0]){
+                result[j][1]=max(result[j][1],interval[i][1]);
+            }
+            //else they are not overlapping
+            else
+            {
+                j++;
+                result.push_back(interval[i]);
+            }
+        }
+        return result;
+    }
+};
 
+// Next Permutation
+
+class Solution {
+public:
+    void nextPermutation(vector<int>& nums) {
+        int n=nums.size();
+        int idx=-1;
+        for(int i=n-1;i>0;i--){
+            if(nums[i]>nums[i-1]){
+                idx=i;
+                break;
+            }    
+        }
+        if(idx==-1){
+            reverse(nums.begin(),nums.end());
+        }
+        else{
+            int prev=idx;
+            for(int i=idx+1;i<n;i++){
+                if(nums[i]>nums[idx-1] && nums[i]<=nums[prev]){
+                    prev=i;
+                }
+            }
+            swap(nums[idx-1],nums[prev]);
+            reverse(nums.begin()+idx,nums.end());
+        }
+    }
+};
+
+// Count Inversions
+
+class Solution{
+  public:
+    long long int merge(long long int arr[],long long int temp[],long long int left,long long int mid,long long int right){
+        long long int i,j,k;
+        long long int count =0;
+        i=left;
+        j=mid;
+        k=left;
+        while((i<=mid-1)&&(j<=right)){
+            if(arr[i]<=arr[j]){
+                temp[k++]=arr[i++];
+            }
+            else {
+                temp[k++]=arr[j++];
+                count+=mid-i;
+            }
+        }
+        while(i<=mid-1){
+            temp[k++]=arr[i++];
+        }
+        while(j<=right){
+            temp[k++]=arr[j++];
+        }
+        for(i=left;i<=right;i++){
+            arr[i]=temp[i];
+            return count;
+        }
+    }
+    long long int merge_sort(long long int arr[],long long int temp[], long long int left,long long int right){
+        long long int mid, count=0;
+        if(right>left){
+            mid=(right+left)/2;
+            count+=merge_sort(arr,temp,left,mid);
+            count+=merge_sort(arr,temp,mid+1,right);
+            count+=merge(arr,temp,left,mid+1,right);
+        }
+        return count;
+    }
+    long long int inversionCount(long long int arr[], long long int N)
+    {
+        long long int temp[N];
+        return merge_sort(arr,temp,0,N-1);
+    }
+};
+
+// Best time to buy and sell stocks
+
+class Solution {
+public:
+    int maxProfit(vector<int>& prices) {
+        int maximumProfit=0;
+        int minimum=prices[0];
+        for(int i=0;i<prices.size();i++){
+            minimum=min(minimum,prices[i]);
+            int profit=prices[i]-minimum;
+            maximumProfit=max(maximumProfit,profit);
+        }
+        return maximumProfit;
+    }
+};
+
+// Count pairs with given sum
+
+class Solution{   
+public:
+    int getPairsCount(int arr[], int n, int k) {
+        unordered_map<int,int> m;
+        int ans=0;
+        for(int i=0;i<n;i++){
+            int b=k-arr[i];
+            if(m[b]){
+                ans+=m[b];
+            }
+            m[arr[i]]++;
+        }
+        return ans;
+    }
+};
+
+// Common elements
+
+class Solution
+{
+    public:    
+       vector <int> commonElements (int A[], int B[], int C[], int n1, int n2, int n3)
+        {
+            int i=0,j=0,k=0;
+            vector<int> ans;
+            int prev1,prev2,prev3;
+            prev1=prev2=prev3=INT_MIN;
+            while(i<n1 && j<n2 && k<n3){
+                while(A[i]==prev1 && i<n1){
+                    i++;
+                }
+                while(B[j]==prev2 && j<n2){
+                    j++;
+                }
+                while(C[k]==prev3 && k<n3){
+                    k++;
+                }
+                if(A[i]==B[j] && B[j]==C[k]){
+                    ans.push_back(A[i]);
+                    prev1=A[i];
+                    prev2=B[j];
+                    prev3=C[k];
+                    i++;
+                    j++;
+                    k++;
+                }
+                else if(A[i]<B[j]){
+                    prev1=A[i];
+                    i++;
+                }
+                else if(B[j]<C[k]){
+                    prev2=B[j];
+                    j++;
+                }
+                else{
+                    prev3=C[k];
+                    k++;
+                }
+            }
+            return ans;
+        }
+};
+
+// Rearrange array in alternating positive & negative items with O(1) extra space
+
+#include <bits/stdc++.h>
+using namespace std;
+
+void rearrange(int arr[], int n){
+	int i = -1, j = n;
+	while (i < j){
+		while(i <= n - 1 and arr[i] > 0){
+			i++;
+        }
+		while (j >= 0 and arr[j] < 0){
+			j--;
+        }
+		if (i < j){
+			swap(arr[i], arr[j]);
+        }
+	}
+	if (i == 0 || i == n){
+		return;
+    }
+	int k = 0;
+	while (k < n && i < n){
+		swap(arr[k], arr[i]);
+		i++;
+		k = k + 2;
+	}
+}
+
+// Utility function to print an array
+void printArray(int arr[], int n)
+{
+	for (int i = 0; i < n; i++)
+	cout << arr[i] << " ";
+	cout << endl;
+}
+
+int main()
+{
+	int arr[] = {2, 3, -4, -1, 6, -9};
+	int n = 6;
+	cout << "Given array is \n";
+	printArray(arr, n);
+	rearrange(arr, n);
+	return 0;
+}
+
+// Subarray with 0 sum
+
+class Solution{
+    public:
+    //Complete this function
+    //Function to check whether there is a subarray present with 0-sum or not.
+    bool subArrayExists(int arr[], int n)
+    {
+        unordered_set<int> s;
+        int pre_sum=0;
+        for(int i=0;i<n;i++){
+            pre_sum+=arr[i];
+            if(pre_sum==0){
+                return true;
+            }
+            if(s.find(pre_sum)!=s.end()){
+                return true;
+            }
+            s.insert(pre_sum);
+        }
+        return false;
+    }
+};
+
+// Factorial of a large number
+
+class Solution {
+public:
+    vector<int> factorial(int N){
+         vector<int> res;
+         res.push_back(1);
+         
+         for(int x=2;x<=N;x++){
+             int car=0;
+             for(int i=0;i<res.size();i++){
+                 int val = res[i]*x+car;
+                 res[i]=val %10;
+                 car=val/10;
+             }
+             while(car!=0){
+                 res.push_back(car%10);
+                 car/=10;
+             }
+         }
+         reverse(res.begin(),res.end());
+         return res;
+    }
+};
+
+// Maximum Product Subarray
+
+class Solution{
+public:
+
+	// Function to find maximum product subarray
+	long long maxProduct(vector<int> arr, int n) {
+	    long long int maxProd=INT_MIN;
+	    long long int prod=1;
+	    for(int i=0;i<n;i++){
+	        prod*=arr[i];
+	        maxProd=max(maxProd,prod);
+	        if(prod==0){
+	            prod=1;
+	        }
+	    }
+	    prod=1;
+	    for(int i=n-1;i>0;i--){
+	        prod*=arr[i];
+	        maxProd=max(maxProd,prod);
+	        if(prod==0){
+	            prod=1;
+	        }
+	    }
+	    return maxProd;
+	}
+};
+
+// Longest consecutive subsequence
+
+class Solution{
+  public:
+    int findLongestConseqSubseq(int arr[], int N)
+    {
+        unordered_set<int> s;
+        for(int i=0;i<N;i++){
+            s.insert(arr[i]);
+        }
+        int ans=0;
+        for(int i=0;i<N;i++){
+            if(s.find(arr[i]-1)!=s.end()){
+                continue;
+            }
+            else{
+                int count=0;
+                int current=arr[i];
+                while(s.find(current)!=s.end()){
+                    count++;
+                    current++;
+                }
+            ans=max(ans,count);
+            }
+        }
+        return ans;
+    }
+};
+
+// (Method-2)
+class Solution{
+  public:
+    int findLongestConseqSubseq(int arr[], int N)
+    {
+        unordered_set<int> s;
+        for(int i=0;i<N;i++){
+            s.insert(arr[i]);
+        }
+        int ans=INT_MIN;
+        for(int i=0;i<N;i++){
+            if(s.find(arr[i]-1)==s.end()){
+                int j=arr[i]+1;
+                while(s.find(j)!=s.end()){
+                    j++;
+                }
+                ans=max(ans,j-arr[i]);
+            }
+        }
+        return ans;
+    }
+};
+// Given Array of size n and a number k, find all elements that appear more than n/k times
+
+
+
+// Maximum profit by buying and selling a share at most twice
