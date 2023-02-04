@@ -70,6 +70,39 @@ int main(){
     return 0;
 }
 
+// (Actual Ques)
+
+class Solution
+{
+   public:
+   
+    int maximum(int arr[],int size){
+        int max=arr[0];
+        for (int i = 0; i < size; i++)
+        {
+            if(max<arr[i])
+                max=arr[i];
+        } 
+        return max;
+        }
+
+    int minimum(int arr[],int size){
+        int min=arr[0];
+        for (int i = 0; i < size; i++)
+        {
+            if(min>arr[i])
+                min=arr[i];
+        } 
+        return min;
+    }
+    
+    int findSum(int A[], int N)
+    {
+    	int c=maximum(A,N)+minimum(A,N);
+    	return c;
+    }
+};
+
 // Kth smallest number in an array
 
 //{ Driver Code Starts
@@ -802,6 +835,285 @@ class Solution{
 };
 // Given Array of size n and a number k, find all elements that appear more than n/k times
 
-
-
+class Solution
+{
+    public:
+    //Function to find all elements in array that appear more than n/k times.
+    int countOccurence(int arr[], int n, int k) {
+        unordered_map<int,int> m;
+        int x=n/k,count=0;
+        for(int i=0;i<n;i++){
+            m[arr[i]]+=1;
+            if(m[arr[i]]>x){
+                count++;
+                m[arr[i]]=-10000;
+            }
+        }
+        return count;
+    }
+    
 // Maximum profit by buying and selling a share at most twice
+
+int maxProfit(vector<int>&arr){
+    int first_buy = INT_MIN;
+      int first_sell = 0;
+      int second_buy = INT_MIN;
+      int second_sell = 0;
+       
+      for(int i=0;i<arr.size();i++) {
+         
+          first_buy = max(first_buy,-arr[i]);//we set prices to negative, so the calculation of profit will be convenient
+          first_sell = max(first_sell,first_buy+arr[i]);
+          second_buy = max(second_buy,first_sell-arr[i]);//we can buy the second only after first is sold
+          second_sell = max(second_sell,second_buy+arr[i]);
+       
+    }
+     return second_sell;
+}
+
+// Array Subset of another array
+
+string isSubset(int a1[], int a2[], int n, int m) {
+    int j=0;
+    sort(a1,a1+n);
+    sort(a2,a2+m);
+    if(m>n){
+        return "No";
+    }
+    else{
+        for(int i=0;i<n;i++){
+            if(a1[i]==a2[j]){
+                j++;
+            }
+            if(j==m){
+                return "Yes";
+            }
+        }
+        return "No";
+    }
+}
+
+// Triplet Sum in Array
+
+class Solution{
+    public:
+    //Function to find if there exists a triplet in the 
+    //array A[] which sums up to X.
+    bool find3Numbers(int A[], int n, int X)
+    {
+        sort(A, A+n);
+        for(int i = 0; i < n; i++){
+            int y = X - A[i];
+            int low = i+1, high = n-1;
+            while (low < high){
+                if(A[low] + A[high] == y){
+                    return 1;
+                }
+                else if(A[low] + A[high] > y){
+                    high--;
+                }
+                else if(A[low] + A[high] < y){
+                    low++;
+                }
+            }
+        }
+        return 0;
+    }
+};
+
+// Trapping Rainwater
+
+
+class Solution{
+    public:
+    long long trappingWater(int arr[], int n){
+        int left=0,right=n-1,maxLeft=0,maxRight=0;
+        long long ans=0;
+        while(left<=right){
+            if(arr[left]<=arr[right]){
+                if(arr[left]>=maxLeft){
+                    maxLeft=arr[left];
+                }
+                else{
+                    ans+=maxLeft-arr[left];
+                }
+                left++;
+            }
+            else{
+                if(arr[right]>=maxRight){
+                    maxRight=arr[right];
+                }
+                else{
+                    ans+=maxRight-arr[right];
+                }
+                right--;
+            }
+        }
+        return ans;
+    }
+};
+
+// Chocolate Distribution
+
+class Solution{
+    public:
+    long long findMinDiff(vector<long long> a, long long n, long long m){
+        sort(a.begin(),a.end());    
+        long long min=INT_MAX;
+        for(int i=0;i<=(n-m);i++){
+            if((a[i+m-1]-a[i]) < min){
+                min=a[i+m-1]-a[i];
+            }
+        }
+        return min;
+    }   
+};
+
+// Smallest subarray with sum greater than x
+
+class Solution{
+  public:
+
+    int smallestSubWithSum(int arr[], int n, int x)
+    {
+        int curr_sum = 0, min_len = n + 1;
+ 
+        int start = 0, end = 0;
+        while (end < n) {
+            
+            while (curr_sum <= x && end < n)
+                curr_sum += arr[end++];
+     
+            while (curr_sum > x && start < n) {
+                if (end - start < min_len)
+                    min_len = end - start;
+     
+                curr_sum -= arr[start++];
+            }
+        }
+        return min_len;  
+    }
+};
+
+// Three way partitioning
+
+class Solution{   
+public:
+    //Function to partition the array around the range such 
+    //that array is divided into three parts.
+    void threeWayPartition(vector<int>& arr,int a, int b)
+    {
+        int start = 0, end = arr.size()-1, i = 0;
+    	while(i<=end)
+    	{
+    		if (arr[i] < a){
+    			swap(arr[i], arr[start]);
+                i++;
+                start++;
+            }    
+    		else if (arr[i] > b){
+    			swap(arr[i], arr[end]);
+                end--;
+            }
+    		else{
+    			i++;
+            }    
+    	}
+        
+    }
+};
+
+// Minimum swaps and K together
+
+class Solution
+{
+public:
+    int minSwap(int arr[], int n, int k) {
+        int count = 0;
+        for (int i = 0; i < n; ++i){
+            if (arr[i] <= k)
+                ++count;
+        } 
+        int bad = 0;
+        for (int i = 0; i < count; ++i){
+            if (arr[i] > k)
+                ++bad;
+        } 
+        int ans = bad;
+        for (int i = 0, j = count; j < n; ++i, ++j) { 
+            if (arr[i] > k){
+                --bad;
+            } 
+            if (arr[j] > k){
+                ++bad;
+            }
+            ans = min(ans, bad);
+        }
+        return ans;
+    }
+};
+
+// Palindromic Array(Minimum Number of Operations required to make an array palindromic)
+
+class Solution {
+public:
+    int PalinArray(int a[], int n)
+    {
+        int i,temp,ans,r;
+        for(i=0; i<n; i++){
+            temp = a[i];
+            ans = 0;
+            while(temp>0){
+                r = temp%10;
+                ans = (ans*10)+r;
+                temp = temp/10;
+            }
+            if (ans != a[i]){            
+                return 0;
+            }
+        }
+        return 1;
+    }
+};
+
+// Median of two sorted arrays of equal size
+
+class Solution
+{
+public:
+	int find_median(vector<int> s)
+	{
+	    int n=s.size();
+	    sort(s.begin(),s.end());
+            if(n%2==1){
+              return(s[n/2]);  
+            } 
+            else{
+                return (s[(n-1)/2] + s[n/2])/2;
+            }
+	}
+};
+
+// Median of two sorted arrays of different size
+
+class Solution{
+    public:
+    double MedianOfArrays(vector<int>& array1, vector<int>& array2)
+    {
+       vector<int> v;
+	   for(int i=0;i<array1.size();i++){
+	       v.push_back(array1[i]);
+	   }
+	   for(int i=0;i<array2.size();i++){
+	       v.push_back(array2[i]);
+	   }
+	   sort(v.begin(),v.end());
+	   int mid=v.size()/2;
+	   if(v.size()%2!=0){ 
+	       return v[mid];
+	   }
+	   else{
+	       return double(v[mid]+v[mid-1])/2;    
+	   } 
+    }
+};
