@@ -507,29 +507,32 @@ class Solution {
 public:
     void nextPermutation(vector<int>& nums) {
         int n=nums.size();
-        int idx=-1;
-        for(int i=n-1;i>0;i--){
-            if(nums[i]>nums[i-1]){
-                idx=i;
-                break;
-            }    
+        if(n==1){
+            return;
         }
-        if(idx==-1){
+        int idx1;
+        for(int i=n-2;i>=0;i--){
+            if(nums[i]<nums[i+1]){
+                idx1=i;
+                break;
+            }
+        }
+        if(idx1<0){
             reverse(nums.begin(),nums.end());
         }
         else{
-            int prev=idx;
-            for(int i=idx+1;i<n;i++){
-                if(nums[i]>nums[idx-1] && nums[i]<=nums[prev]){
-                    prev=i;
+            int idx2=0;
+            for(int i=n-1;i>=0;i--){
+                if(nums[i]>nums[idx1]){
+                    idx2=i;
+                    break;
                 }
             }
-            swap(nums[idx-1],nums[prev]);
-            reverse(nums.begin()+idx,nums.end());
+            swap(nums[idx1],nums[idx2]);
+            reverse(nums.begin()+idx1+1,nums.end());
         }
     }
 };
-
 // Count Inversions
 
 class Solution{
